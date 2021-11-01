@@ -3,7 +3,7 @@
 /*
   Plugin Name: AloniDev - Elementor Custom Blocks
   Plugin URI: http://www.alonidev.com
-  Version: 1.3.6
+  Version: 1.3.7
   Author: Guy Aloni
   Text Domain: ecb
  */
