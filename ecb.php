@@ -6,7 +6,7 @@ use ElementorCustomBlocks\Services\WidgetService;
 /*
   Plugin Name: AloniDev - Elementor Custom Blocks
   Plugin URI: http://www.alonidev.com
-  Version: 1.0.3
+  Version: 1.0.4
   Author: Guy Aloni
   Text Domain: ecb
  */
@@ -21,8 +21,8 @@ define('ECB_ROOT_DIR_PATH', __DIR__);
 define('ECB_ROOT_FILE_PATH', __FILE__);
 define('ECB_ROOT_DIR_URL', plugins_url("", __FILE__));
 define('ECB_INFO_URL', 'http://alonidev.com/');
-define('ECB_REMOTE_PACKAGE_URL', 'https://bitbucket.org/guyaloni912/elementor-custom-blocks/get/release.zip');
-define('ECB_REMOTE_ROOT_FILE_URL', 'https://bitbucket.org/guyaloni912/elementor-custom-blocks/raw/release/ecb.php');
+define('ECB_REMOTE_PACKAGE_URL', 'https://github.com/guyaloni912/elementor-custom-blocks/archive/refs/heads/release.zip');
+define('ECB_REMOTE_ROOT_FILE_URL', 'https://raw.githubusercontent.com/guyaloni912/elementor-custom-blocks/release/ecb.php');
 
 UpdateService::init_update();
 
