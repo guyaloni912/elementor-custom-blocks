@@ -1,0 +1,70 @@
+.ecb-widget.uneditable-fields .elementor-control-fields .elementor-repeater-row-tool,
+.ecb-widget.uneditable-fields .elementor-control-fields .elementor-control-key,
+.ecb-widget.uneditable-fields .elementor-control-fields .elementor-control-type,
+.ecb-widget.uneditable-fields .elementor-control-fields [class*="elementor-control-value_"] .elementor-control-title,
+.ecb-widget.uneditable-fields .elementor-control-fields .elementor-repeater-add{
+	display: none!important;
+}
+
+.ecb-widget.uneditable-fields .elementor-control-fields .elementor-repeater-fields{
+	margin-bottom: 30px;
+}
+
+.ecb-widget.uneditable-fields .elementor-control-fields .elementor-repeater-row-controls{
+	display:block!important;
+	padding-top:0!important;
+}
+.ecb-widget.uneditable-fields .elementor-control-fields .elementor-repeater-fields .elementor-repeater-row-item-title{
+	text-transform: capitalize;
+}
+
+.ecb-widget.uneditable-fields .elementor-control-fields .elementor-repeater-fields .elementor-repeater-row-tools,
+.ecb-widget.uneditable-fields .elementor-control-fields .elementor-repeater-fields .elementor-repeater-row-controls{
+	border-spacing: 0;
+	border:none;
+	height:auto;
+	display:inline;
+	background-color:transparent;
+}
+
+.ecb-widget.uneditable-fields .elementor-control-fields .elementor-repeater-fields .elementor-repeater-row-item-title,
+.ecb-widget.uneditable-fields .elementor-control-fields .elementor-repeater-fields .elementor-control{
+	padding:0;
+}
+
+.ecb-widget .working-spinner{
+	display:none;
+}
+.ecb-widget.working .working-spinner{
+	height: 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.ecb-widget.working .elementor-control-fields .elementor-control-content{
+	display: none;
+}
+
+.ecb-widget .elementor-control-update_fields .elementor-control-title .out-of-sync{
+	color: #FF0000;
+}
+.ecb-widget .elementor-control-update_fields .elementor-control-title .in-sync{
+	color: #08A408;
+}
+
+.ecb-widget .elementor-control-html_field_controls .edit-template-wrapper{
+	margin-bottom: 10px;
+	text-align: right;
+}
+.ecb-widget .elementor-control-html_field_controls .btns-wrapper{
+	display:flex;
+	justify-content: flex-end;
+	column-gap: 5px;
+}
+.ecb-widget .elementor-control-html_field_controls button{
+	padding:7px 10px;
+}
+
+.ecb-widget.editable-fields .elementor-control-html_field_controls .btn-edit-fields{
+	background-color: #7c7c7c;
+}
