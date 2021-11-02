@@ -1,27 +1,32 @@
 <?php
 
+use ElementorCustomBlocks\Services\UpdateService;
+use ElementorCustomBlocks\Services\WidgetService;
+
 /*
   Plugin Name: AloniDev - Elementor Custom Blocks
   Plugin URI: http://www.alonidev.com
-  Version: 1.5.0
+  Version: 1.0.0
   Author: Guy Aloni
   Text Domain: ecb
  */
 
-
-add_filter('pre_set_site_transient_update_plugins', function ($transient) {
-	$basefilename = basename(__FILE__);
-	$basedirname = basename(__DIR__);
-	$base_url = 'https://bitbucket.org/guyaloni912/elementor-custom-blocks/';
-	$current_version = get_file_data(__FILE__, ['version'])[0];
-	$new_version = get_file_data($base_url . 'raw/release/ecb.php', ['version'])[0];
-	if (version_compare($current_version, $new_version) < 0) {
-		$obj = new stdClass();
-		$obj->slug = $basefilename;
-		$obj->new_version = $new_version;
-		$obj->url = 'http://alonidev.com/';
-		$obj->package = $base_url . 'get/release.zip';
-		$transient->response[$basedirname . '/' . $basefilename] = $obj;
+spl_autoload_register(function ($class_name) {
+	if (stripos($class_name, 'ElementorCustomBlocks\\') === 0) {
+		include __DIR__ . "/" . str_replace('\\', '/', $class_name) . '.php';
 	}
-	return $transient;
 });
+
+define('ECB_ROOT_DIR_PATH', __DIR__);
+define('ECB_ROOT_FILE_PATH', __FILE__);
+define('ECB_ROOT_DIR_URL', plugins_url("", __FILE__));
+define('ECB_INFO_URL', 'http://alonidev.com/');
+define('ECB_REMOTE_PACKAGE_URL', 'https://bitbucket.org/guyaloni912/elementor-custom-blocks/get/release.zip');
+define('ECB_REMOTE_FILE_URL', 'https://bitbucket.org/guyaloni912/elementor-custom-blocks/raw/release/ecb.php');
+
+UpdateService::init_update();
+
+WidgetService::init_widgets();
+WidgetService::init_editor_assets();
+WidgetService::init_ajax_hooks();
+WidgetService::init_elementor_custom_block_shortcode();
