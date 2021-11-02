@@ -2,6 +2,8 @@
 
 namespace ElementorCustomBlocks\Services {
 
+	use stdClass;
+
 	class UpdateService {
 
 		static function init_update() {
@@ -9,7 +11,7 @@ namespace ElementorCustomBlocks\Services {
 				$basefilename = basename(ECB_ROOT_FILE_PATH);
 				$basedirname = basename(ECB_ROOT_DIR_PATH);
 				$current_version = get_file_data(ECB_ROOT_FILE_PATH, ['version'])[0];
-				$new_version = get_file_data(ECB_REMOTE_FILE_URL, ['version'])[0];
+				$new_version = get_file_data(ECB_REMOTE_ROOT_FILE_URL, ['version'])[0];
 				if (version_compare($current_version, $new_version) < 0) {
 					$obj = new stdClass();
 					$obj->slug = $basefilename;
