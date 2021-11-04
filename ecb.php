@@ -6,7 +6,7 @@ use ElementorCustomBlocks\Services\WidgetService;
 /*
   Plugin Name: AloniDev - Elementor Custom Blocks
   Plugin URI: http://www.alonidev.com
-  Version: 1.0.5
+  Version: 1.0.6
   Author: Guy Aloni
   Text Domain: ecb
  */
