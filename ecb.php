@@ -1,12 +1,11 @@
 <?php
 
-use ElementorCustomBlocks\Services\UpdateService;
 use ElementorCustomBlocks\Services\WidgetService;
 
 /*
   Plugin Name: AloniDev - Elementor Custom Blocks
   Plugin URI: http://www.alonidev.com
-  Version: 1.2.0
+  Version: 1.3.0
   Author: Guy Aloni
   Text Domain: ecb
  */

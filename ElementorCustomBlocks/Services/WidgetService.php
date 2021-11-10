@@ -13,10 +13,11 @@ namespace ElementorCustomBlocks\Services {
 			});
 		}
 
-		public static function init_editor_assets() {
-			add_action('elementor/editor/after_enqueue_scripts', function () {
-				wp_enqueue_style('ecb-admin', ECB_ROOT_DIR_URL . "/assets/css/ecb-admin.css");
-				wp_enqueue_script('ecb-admin', ECB_ROOT_DIR_URL . "/assets/js/ecb-admin.js");
+		public static function init_editor_assets($plugin_root_file) {
+			add_action('elementor/editor/after_enqueue_scripts', function () use ($plugin_root_file) {
+				$plugin_root_url = plugins_url("", $plugin_root_file);
+				wp_enqueue_style('ecb-admin', $plugin_root_url . "/assets/css/ecb-admin.css");
+				wp_enqueue_script('ecb-admin', $plugin_root_url . "/assets/js/ecb-admin.js");
 			});
 		}
 
