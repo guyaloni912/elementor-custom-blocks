@@ -1,3 +1,10 @@
+.ecb-widget .elementor-control-fields .elementor-control-type-color .e-global__popover-toggle{
+	display: none;
+}
+.ecb-widget .elementor-control-fields .elementor-control-type-color .elementor-control-input-wrapper{
+	max-width: 100%;
+}
+
 .ecb-widget.uneditable-fields .elementor-control-fields .elementor-repeater-row-tool,
 .ecb-widget.uneditable-fields .elementor-control-fields .elementor-control-key,
 .ecb-widget.uneditable-fields .elementor-control-fields .elementor-control-type,

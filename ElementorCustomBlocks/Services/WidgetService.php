@@ -63,7 +63,7 @@ namespace ElementorCustomBlocks\Services {
 				}
 				$content = self::replace_fields($content, $replacements, $fields);
 				return $match_str . $content;
-			});
+			}, -1000);
 		}
 
 		private static function get_elementor_template_content($template_id) {

@@ -77,7 +77,8 @@ namespace ElementorCustomBlocks\Classes {
 							"content" => "Content",
 							"image" => "Image",
 							"icon" => "Icon",
-							"bool" => "Bool"
+							"bool" => "Bool",
+							"color" => "Color"
 						],
 						'default' => 'text',
 						'label_block' => true
@@ -127,6 +128,16 @@ namespace ElementorCustomBlocks\Classes {
 						'type' => \Elementor\Controls_Manager::SWITCHER,
 						'label_block' => true,
 						'condition' => ['type' => 'bool']
+					]
+			);
+
+			$repeater->add_control(
+					'value_color',
+					[
+						'label' => 'Value',
+						'type' => \Elementor\Controls_Manager::COLOR,
+						'label_block' => true,
+						'condition' => ['type' => 'color']
 					]
 			);
 
@@ -181,6 +192,9 @@ namespace ElementorCustomBlocks\Classes {
 							break;
 						case "bool":
 							$value = $field['value_bool'] ? 1 : 0;
+							break;
+						case "color":
+							$value = $field['value_color'];
 							break;
 					}
 					$vars .= sprintf("%s|%s,", urlencode($key), urlencode($value));
