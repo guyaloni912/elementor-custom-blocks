@@ -44,18 +44,21 @@
 					var interval = setInterval(() => {
 						var key = keysArray[keysPointer];
 						var field = fields[key];
-						var type = field["type"];
-						var $item = this.getItem(key);
-						if ($item === null) {
-							$item = this.createItem();
+						if (field) {
+							var type = field["type"];
+							var $item = this.getItem(key);
+							if ($item === null) {
+								$item = this.createItem();
+							}
+							this.updateItem($item, key, type);
+							items.push($item);
 						}
-						this.updateItem($item, key, type);
-						items.push($item);
 						keysPointer++;
-						if (keysPointer === keysArray.length) {
+						if (keysPointer >= keysArray.length) {
 							clearInterval(interval);
 							$(".ecb-widget").removeClass("working");
 						}
+
 					});
 					var orphans = this.getOrphans(keysArray);
 					this.deleteItems(orphans, orphans.length + " orphaned fields found\n\nClick 'OK' to delete them");
