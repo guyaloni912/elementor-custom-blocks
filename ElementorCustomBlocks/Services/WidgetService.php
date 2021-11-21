@@ -66,6 +66,15 @@ namespace ElementorCustomBlocks\Services {
 			});
 		}
 
+		public static function add_filters() {
+			add_filter('clean_url', function ($url, $original_url) {
+				if (preg_match('/\[field.*key=.*\]/i', $url)) {
+					return $original_url;
+				}
+				return $url;
+			}, 10, 2);
+		}
+
 		private static function get_elementor_template_content($template_id) {
 			$rnd = rand(999999, 9999999);
 			$content = do_shortcode(do_shortcode('[elementor-template id="' . $template_id . '" css="true"]'));

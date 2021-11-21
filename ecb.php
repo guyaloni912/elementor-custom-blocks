@@ -5,7 +5,7 @@ use ElementorCustomBlocks\Services\WidgetService;
 /*
   Plugin Name: AloniDev - Elementor Custom Blocks
   Plugin URI: http://www.alonidev.com
-  Version: 1.5.0
+  Version: 1.6.0
   Author: Guy Aloni
   Text Domain: ecb
  */
@@ -43,3 +43,4 @@ WidgetService::init_widgets();
 WidgetService::init_editor_assets(__FILE__);
 WidgetService::init_ajax_hooks();
 WidgetService::init_elementor_custom_block_shortcode();
+WidgetService::add_filters();
